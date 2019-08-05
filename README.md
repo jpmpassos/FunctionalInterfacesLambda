@@ -42,7 +42,7 @@ Para tal implementação foi usada duas interfaces funcionais que permitirá rea
     public interface IPreencherLista<T, E> {
         void preencher(T t, List<? super E> e);
     }
-  
+ 
  # Por fim a função que faz uso das interfaces funcionais
  
      public static <T, E> void preencher(
