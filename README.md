@@ -43,7 +43,7 @@ Para tal implementação foi usada duas interfaces funcionais que permitirá rea
         void preencher(T t, List<? super E> e);
     }
  
- # Por fim a função que faz uso das interfaces funcionais
+# Por fim a função que faz uso das interfaces funcionais
  
      public static <T, E> void preencher(
             List<T> t, List<E> e,
