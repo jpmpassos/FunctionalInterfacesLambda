@@ -1,12 +1,12 @@
 ## Functional Interface Lambda
 
-Esse projeto tem o intuito de implementar interface funcional de um função genérica de mesclar duas listas de objetos. Esse exemplo foi criado por mim, [Medina Passos](http://medinapassos.com.br).
+Esse projeto tem o intuito de implementar uma interface funcional de uma função genérica de mesclar duas listas de objetos. Esse exemplo foi criado por mim, [Medina Passos](http://medinapassos.com.br).
 
-Para rodar este código basta apenas realizar clone do repositório em seu computador e executar o mesmo com sua IDE de preferência.
+Para rodar este código basta apenas realizar o clone do repositório em seu computador e executar o mesmo com sua IDE de preferência.
 
 ### Problema
 
-Normalmente sempre temos a necessidade de carregar um lista de objetos que em cada objeto pode conter inúmeros objetos e até um lista de objetos. Como exemplo, posso citar um Pedido que pode ter uma lista de pedidos.
+Normalmente sempre temos a necessidade de carregar uma lista de objetos que em cada objeto pode conter inúmeros objetos e até uma lista de objetos. Como exemplo, posso citar um Pedido que pode ter uma lista de pedidos.
 
 E se por algum motivo, ao invés de de ter cada Pedido com sua lista já carregada, tivermos duas lista uma de pedidos e outra dos itens do pedido? Assim necessitaríamos de mesclar essas duas lista preenchendo cada pedido com seus respectivos itens.   
 
@@ -42,8 +42,8 @@ Para tal implementação foi usada duas interfaces funcionais que permitirá rea
     public interface IPreencherLista<T, E> {
         void preencher(T t, List<? super E> e);
     }
-  
- # Por fim a função que faz uso das interfaces funcionais
+ 
+# Por fim a função que faz uso das interfaces funcionais
  
      public static <T, E> void preencher(
             List<T> t, List<E> e,
@@ -67,6 +67,8 @@ Assim podemos realizar a chamada da função fazendo uso do recusro Lambda.
         );
 
 ```
+
+Ao baixar o projeto, pode visualizar o teste unitário com na classe `FuncoesUtilsTest`.
 
 Esse exemplo foi criado por mim, [Medina Passos](http://medinapassos.com.br).
 
