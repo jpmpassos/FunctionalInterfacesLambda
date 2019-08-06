@@ -6,7 +6,7 @@ Para rodar este código basta apenas realizar o clone do repositório em seu com
 
 ### Problema
 
-Normalmente sempre temos a necessidade de carregar uma lista de objetos que em cada objeto pode conter inúmeros objetos e até uma lista de objetos. Como exemplo, posso citar um Pedido que pode ter uma lista de pedidos.
+Normalmente sempre temos a necessidade de carregar uma lista de objetos que em cada objeto pode conter inúmeros objetos e até uma lista de objetos. Como exemplo, posso citar um Pedido que pode ter uma lista de itens.
 
 E se por algum motivo, ao invés de de ter cada Pedido com sua lista já carregada, tivermos duas lista uma de pedidos e outra dos itens do pedido? Assim necessitaríamos de mesclar essas duas lista preenchendo cada pedido com seus respectivos itens.   
 
