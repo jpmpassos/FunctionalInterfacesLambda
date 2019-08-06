@@ -55,8 +55,7 @@ public class FuncoesUtilsTest {
         FuncoesUtils.<Pedido, Item>preencher(
                 pedidos, itens,
                 (Pedido p, Item i) -> p.getPedidoId().equals(i.getPedidoId()),
-                (Pedido p, List<? super Item> l)
-                -> p.setItens((List<Item>) l)
+                (Pedido p, List<? super Item> l) -> p.setItens((List<Item>) l)
         );
 
         assertEquals(pedidos.get(0).getPedidoId(), pedidos.get(0).getItens().get(0).getPedidoId());
@@ -84,8 +83,7 @@ public class FuncoesUtilsTest {
         FuncoesUtils.<Cliente, Endereco>preencher(
                 clientes, enderecos,
                 (Cliente c, Endereco e) -> c.getClienteId().equals(e.getClienteId()),
-                (Cliente c, List<? super Endereco> l)
-                -> c.setEnderecos((List<Endereco>) l)
+                (Cliente c, List<? super Endereco> l) -> c.setEnderecos((List<Endereco>) l)
         );
 
         assertEquals(clientes.get(3).getClienteId(), enderecos.get(7).getClienteId());
