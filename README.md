@@ -1,6 +1,6 @@
 ## Functional Interface Lambda
 
-Esse projeto tem o intuito de implementar uma interface funcional de uma função genérica de mesclar duas listas de objetos. Esse exemplo foi criado por mim, [Medina Passos](http://medinapassos.com.br).
+Esse projeto tem o intuito de implementar uma interface funcional de uma função genérica de mesclar duas listas de objetos.
 
 Para rodar este código basta apenas realizar o clone do repositório em seu computador e executar o mesmo com sua IDE de preferência.
 
