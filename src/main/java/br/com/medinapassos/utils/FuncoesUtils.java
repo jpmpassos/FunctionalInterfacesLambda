@@ -70,8 +70,8 @@ public class FuncoesUtils {
 
             while (true) {
                 index = Collections.binarySearch(
-                        itensTemp, 
-                        item, 
+                        itensTemp,
+                        item,
                         (Item arg0, Item arg1) -> arg0.getPedidoId().compareTo(arg1.getPedidoId())
                 );
                 if (index >= 0) {
@@ -83,4 +83,29 @@ public class FuncoesUtils {
             }
         }
     }
+
+    //Algoritimo  desenvolvi por Medina Passos, que realiza o preenchimento quase que instataneo
+    public static void preencherPedidoItemMedinaPassos(List<Pedido> pedidos, List<Item> itens) {
+        Collections.sort(pedidos, (Pedido arg0, Pedido arg1) -> arg0.getPedidoId().compareTo(arg1.getPedidoId()));
+        Collections.sort(itens, (Item arg0, Item arg1) -> arg0.getPedidoId().compareTo(arg1.getPedidoId()));
+
+        int x1, x2;
+
+        x1 = 0;
+        x2 = 0;
+        while (pedidos.size() > x1 && itens.size() > x2) {
+            if (pedidos.get(x1).getPedidoId().intValue() == itens.get(x2).getPedidoId().intValue()) {
+                if (pedidos.get(x1).getItens() == null) {
+                    pedidos.get(x1).setItens(new ArrayList<>());
+                }
+                pedidos.get(x1).getItens().add(itens.get(x2));
+                x2++;
+            } else if (pedidos.get(x1).getPedidoId().intValue() > itens.get(x2).getPedidoId().intValue()) {
+                x2++;
+            } else if (pedidos.get(x1).getPedidoId().intValue() < itens.get(x2).getPedidoId().intValue()) {
+                x1++;
+            }
+        }
+    }
+
 }

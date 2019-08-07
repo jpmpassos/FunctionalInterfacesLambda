@@ -31,6 +31,8 @@ public class NewApiDateInstance {
         List<Pedido> pedidos4 = ModelRepository.getPedidos(10000);
         
         List<Pedido> pedidos5 = ModelRepository.getPedidos(10000);
+        
+        List<Pedido> pedidos6 = ModelRepository.getPedidos(10000);
 
         Duration duracao;
         Instant inicio;
@@ -89,7 +91,18 @@ public class NewApiDateInstance {
         duracaoEmMilissegundos = duracao.toMillis();
 
         System.out.println("FuncoesUtils.preencherPedidosParallel(pedidos1, itens1);");
-        System.out.println("Duração tempo:" + duracaoEmMilissegundos);        
+        System.out.println("Duração tempo:" + duracaoEmMilissegundos);   
+        
+        inicio = Instant.now();
+        FuncoesUtils.preencherPedidoItemMedinaPassos(pedidos6, itens);
+        fim = Instant.now();
+
+        duracao = Duration.between(inicio, fim);
+        duracaoEmMilissegundos = duracao.toMillis();
+
+        System.out.println("Algoritimo Desenvolvido por Medina Passos");
+        System.out.println("FuncoesUtils.preencherPedidoItemOtimizado(pedidos1, itens1);");
+        System.out.println("Duração tempo:" + duracaoEmMilissegundos); 
 
         assertEquals(true, true);
     }
