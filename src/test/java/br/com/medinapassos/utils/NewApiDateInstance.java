@@ -101,7 +101,7 @@ public class NewApiDateInstance {
         duracaoEmMilissegundos = duracao.toMillis();
 
         System.out.println("Algoritimo Desenvolvido por Medina Passos");
-        System.out.println("FuncoesUtils.preencherPedidoItemOtimizado(pedidos1, itens1);");
+        System.out.println("FuncoesUtils.preencherPedidoItemMedinaPassos(pedidos6, itens1);");
         System.out.println("Duração tempo:" + duracaoEmMilissegundos); 
 
         assertEquals(true, true);
