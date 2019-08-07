@@ -84,7 +84,7 @@ public class FuncoesUtils {
         }
     }
 
-    //Algoritimo  desenvolvi por Medina Passos, que realiza o preenchimento quase que instataneo
+    //Algoritimo  desenvolvido por Medina Passos, que realiza o preenchimento quase que instataneo
     public static void preencherPedidoItemMedinaPassos(List<Pedido> pedidos, List<Item> itens) {
         Collections.sort(pedidos, (Pedido arg0, Pedido arg1) -> arg0.getPedidoId().compareTo(arg1.getPedidoId()));
         Collections.sort(itens, (Item arg0, Item arg1) -> arg0.getPedidoId().compareTo(arg1.getPedidoId()));
